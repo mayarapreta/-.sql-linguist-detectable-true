@@ -1,0 +1,21 @@
+create database clinica;
+ use clinica;
+ 
+ create table medico(
+ id_medico integer primary key,
+ crm integer default null,
+ nome varchar (30) default null,
+ endereco varchar (40) default null,
+ telefone varchar(40) default null
+ );
+
+ insert into medico (id_medico,crm,nome,endereco,telefone)
+ value (10,32,'Maria da silva','Rua Rondónia','3441-5680');
+  
+  select * from medico;
+  
+  select * from medico order by nome; -- fica em ordem alfabetica
+  select * from medico order by nome desc;
+  select nome from medico order by nome  limit 3; 
+  select * from medico  where nome like 'A%';
+  select count(id_medico) from medico;
